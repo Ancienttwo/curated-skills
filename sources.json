@@ -1,0 +1,158 @@
+[
+  {
+    "name": "live-panel",
+    "upstream_url": "https://github.com/ythx-101/live-panel-skill",
+    "path_in_upstream": ".",
+    "commit_sha": "2ca517fd774b95145733e76aa94c8e6a91d04fb2",
+    "license": "MIT (+ OFL-1.1 font, ISC Lucide icons; see NOTICE)",
+    "vendored": true,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-best-practices",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-best-practices",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-create",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-create",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-markup",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-markup",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-studio",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-studio",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-render",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-render",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-maps",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-maps",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-captions",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-captions",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-saas",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-saas",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-interactivity",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-interactivity",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-docs",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-docs",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-upgrade",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-upgrade",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
+    "name": "remotion-multimedia",
+    "upstream_url": "https://github.com/remotion-dev/skills",
+    "path_in_upstream": "skills/remotion-multimedia",
+    "commit_sha": "7ba4dcf8ebe1626b00baa41e1f2478113719b60b",
+    "license": "NONE (no LICENSE file upstream; not redistributable)",
+    "vendored": false,
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  }
+]
