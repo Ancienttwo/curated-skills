@@ -2,7 +2,7 @@
 # curated-skills updater / installer. Works with bash 3.2+ (macOS) and Linux. Requires: git, jq, rsync.
 #
 # Usage:
-#   ./update.sh [update] [--dry-run] [skill-name]   re-fetch from upstream HEAD, refresh commit_sha, show diff summary
+#   ./update.sh [update] [--dry-run] [skill-name]   refresh automatic entries; skip manual adaptations
 #   ./update.sh install [--dry-run] [skill-name]    copy skills into ~/.claude/skills and ~/.agents/skills
 #                                                   (source-only skills are fetched from upstream at the pinned commit)
 set -euo pipefail
@@ -39,6 +39,10 @@ fetch() {
 do_update() {
   local n url path old vend d new src dst
   for n in $(names); do
+    if [ "$(field "$n" update_policy)" = "manual" ]; then
+      echo "== $n  manual adaptation; review upstream changes before updating"
+      continue
+    fi
     url=$(field "$n" upstream_url); path=$(field "$n" path_in_upstream); old=$(field "$n" commit_sha); vend=$(field "$n" vendored)
     d=$(fetch "$url"); new=$(git -C "$d" rev-parse HEAD); src="$d/$path"
     echo "== $n  ${old:0:12} -> ${new:0:12}  (vendored=$vend)"

@@ -11,12 +11,15 @@ Curated third-party agent skills, with each skill's upstream source recorded for
   Skills without a license (or that forbid redistribution) are source-only: listed in `sources.json`, no copy here; `install` fetches them from upstream at the pinned commit.
 - 为保持仓库小巧，上游的示例 `.mp4` 视频被移除（如 live-panel 的 `examples/*/*.mp4`），请到上游查看。
   To keep the repo small, upstream example `.mp4` videos are dropped (e.g. live-panel `examples/*/*.mp4`); see upstream for them.
+- 改写的 skill 标记为 `update_policy: "manual"`。自动更新会跳过它们。安装仍使用仓库内的版本。
+  Adapted skills use `update_policy: "manual"`. Automatic updates skip them. Installation uses the local version.
 
 ## Skills
 
 | Skill | Upstream | License | Vendored |
 |---|---|---|---|
 | `live-panel` | [ythx-101/live-panel-skill/.](https://github.com/ythx-101/live-panel-skill) @ `2ca517fd774b` | MIT (+ OFL-1.1 font, ISC Lucide icons; see NOTICE) | ✅ |
+| [`rea-feature-audit`](skills/rea-feature-audit/SKILL.md) | [morluto/rea](https://github.com/morluto/rea/tree/c884864876c2568d8567235737b32e3f5893751d) @ `c884864876c2` | MIT | ✅ adapted; manual updates |
 | `remotion-best-practices` | [remotion-dev/skills/skills/remotion-best-practices](https://github.com/remotion-dev/skills/tree/main/skills/remotion-best-practices) @ `7ba4dcf8ebe1` | NONE (no LICENSE file upstream; not redistributable) | ❌ source-only |
 | `remotion-create` | [remotion-dev/skills/skills/remotion-create](https://github.com/remotion-dev/skills/tree/main/skills/remotion-create) @ `7ba4dcf8ebe1` | NONE (no LICENSE file upstream; not redistributable) | ❌ source-only |
 | `remotion-markup` | [remotion-dev/skills/skills/remotion-markup](https://github.com/remotion-dev/skills/tree/main/skills/remotion-markup) @ `7ba4dcf8ebe1` | NONE (no LICENSE file upstream; not redistributable) | ❌ source-only |
@@ -38,14 +41,21 @@ Curated third-party agent skills, with each skill's upstream source recorded for
 Requires `bash`, `git`, `jq`, `rsync` (macOS & Linux).
 
 ```bash
-./update.sh                     # 更新全部到上游最新，刷新 commit_sha 并显示 diff 摘要 / update all to upstream HEAD
+./update.sh                     # 更新自动条目，跳过手动改写项 / update automatic entries; skip manual adaptations
 ./update.sh live-panel          # 只更新一个 / update one skill
 ./update.sh --dry-run live-panel # 预览，不改动 / preview only
 ./update.sh install             # 安装到 ~/.claude/skills 与 ~/.agents/skills / install all
 ./update.sh install remotion-docs --dry-run
+./update.sh install rea-feature-audit --dry-run
 ```
+
+`rea-feature-audit` 提取了 REA Creator 截图第 1/3 页的两个流程：功能分析和未解决问题审核。原文和来源见 [source-extract.md](skills/rea-feature-audit/references/source-extract.md)。第 2、3 页未提供。此 skill 需要可用的 REA 工具。安装 skill 不会安装或连接 REA MCP server。
+
+`rea-feature-audit` adapts two workflows from page 1 of the REA Creator image: feature investigation and residual-unknown review. See the [extracted text and sources](skills/rea-feature-audit/references/source-extract.md). Pages 2 and 3 were not supplied. The skill needs REA tools. Skill installation does not install or connect the REA MCP server.
 
 更新后检查 `git diff`，并重新确认上游许可证没有变化，再提交。
 After updating, review `git diff` and re-check upstream licenses before committing.
 
 `sources.json` fields: `name, upstream_url, path_in_upstream, commit_sha, license, vendored, installed_to`.
+Optional fields: `update_policy` (`manual` skips automatic updates), `source_files`, and `notes`.
+For a manual adaptation, `path_in_upstream` identifies the related upstream skill. It is not a replacement source.

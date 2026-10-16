@@ -12,6 +12,25 @@
     ]
   },
   {
+    "name": "rea-feature-audit",
+    "upstream_url": "https://github.com/morluto/rea",
+    "path_in_upstream": ".agents/skills/reverse-engineer-anything",
+    "commit_sha": "c884864876c2568d8567235737b32e3f5893751d",
+    "license": "MIT",
+    "vendored": true,
+    "update_policy": "manual",
+    "source_files": [
+      "src/contracts/promptContracts.ts",
+      "docs/mcp-prompts.md",
+      ".agents/skills/reverse-engineer-anything/SKILL.md"
+    ],
+    "notes": "Adapted from page 1 of the user-supplied REA Creator image. Covers investigate_feature and audit_residual_unknowns only. Pages 2 and 3 were not supplied. Review upstream changes manually; preserve the adaptation.",
+    "installed_to": [
+      "~/.claude/skills",
+      "~/.agents/skills"
+    ]
+  },
+  {
     "name": "remotion-best-practices",
     "upstream_url": "https://github.com/remotion-dev/skills",
     "path_in_upstream": "skills/remotion-best-practices",

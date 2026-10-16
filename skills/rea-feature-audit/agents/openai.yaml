@@ -1,0 +1,4 @@
+interface:
+  display_name: "REA Feature Audit"
+  short_description: "Trace app features and audit evidence gaps"
+  default_prompt: "Use $rea-feature-audit to trace this application feature and audit the unresolved questions."

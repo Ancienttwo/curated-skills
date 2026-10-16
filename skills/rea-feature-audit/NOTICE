@@ -1,0 +1,14 @@
+REA Feature Audit is an adaptation of two workflows from REA by morluto.
+Upstream: https://github.com/morluto/rea
+Revision: c884864876c2568d8567235737b32e3f5893751d
+Workflows: investigate_feature and audit_residual_unknowns
+Source contract: src/contracts/promptContracts.ts
+
+The user supplied page 1 of the three-page REA Creator image.
+Only that page is transcribed in references/source-extract.md.
+The image artwork is not included.
+
+The adaptation merges repeated rules and adds task routing, tool-readiness
+handling, revision-conflict handling, and a report format.
+It is maintained in Ancienttwo/curated-skills. It is not the official REA skill.
+The upstream MIT license is preserved in LICENSE.
